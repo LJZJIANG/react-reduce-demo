@@ -13,26 +13,20 @@ function createStore(state, stateChanger) {
 }
 
 function renderApp(appState) {
-	console.log(123)
   renderTitle(appState.title);
-  console.log(1212)
   renderContent(appState.content);
 }
 
-function renderTitle(title2) {
-  console.log(1212)
+function renderTitle(title1) {
   const titleDOM = document.getElementById('title');
-  titleDOM.innerHTML = title2.text;
-  titleDOM.style.color = title2.color;
-  console.log(123)
+  titleDOM.innerHTML = title1.text;
+  titleDOM.style.color = title1.color;
 }
 
 function renderContent(content) {
-  console.log(1212)
   const contentDOM = document.getElementById('content');
   contentDOM.innerHTML = content.text;
   contentDOM.style.color = content.color;
-  console.log(123)
 }
 
 let appState = {
