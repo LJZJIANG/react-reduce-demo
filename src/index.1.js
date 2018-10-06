@@ -1,13 +1,13 @@
 function createStore(state, stateChanger) {
 	console.log(123)
-  const listeners = [];
+  const listeners3 = [];
   console.log(1212)
   debugger
-  const subscribe = listener => listeners.push(listener);
+  const subscribe = listener => listeners3.push(listener);
   const getState = () => state;
   const dispatch = action => {
     stateChanger(state, action);
-    listeners.forEach(listener => listener());
+    listeners3.forEach(listener => listener());
   };
   return { getState, dispatch, subscribe };
 }
@@ -19,11 +19,11 @@ function renderApp(appState) {
   renderContent(appState.content);
 }
 
-function renderTitle(title) {
+function renderTitle(title2) {
   console.log(1212)
   const titleDOM = document.getElementById('title');
-  titleDOM.innerHTML = title.text;
-  titleDOM.style.color = title.color;
+  titleDOM.innerHTML = title2.text;
+  titleDOM.style.color = title2.color;
   console.log(123)
 }
 
@@ -37,7 +37,7 @@ function renderContent(content) {
 
 let appState = {
   title: {
-    text: 'React.js 小书',
+    text: 'React.js 小书3333',
     color: 'red'
   },
   content: {
