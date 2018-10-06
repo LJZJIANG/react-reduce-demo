@@ -1,4 +1,5 @@
 function createStore(state, stateChanger) {
+	console.log(123)
   const listeners = [];
   console.log(1212)
   debugger
@@ -12,6 +13,7 @@ function createStore(state, stateChanger) {
 }
 
 function renderApp(appState) {
+	console.log(123)
   renderTitle(appState.title);
   console.log(1212)
   renderContent(appState.content);
@@ -22,6 +24,7 @@ function renderTitle(title) {
   const titleDOM = document.getElementById('title');
   titleDOM.innerHTML = title.text;
   titleDOM.style.color = title.color;
+  console.log(123)
 }
 
 function renderContent(content) {
@@ -29,6 +32,7 @@ function renderContent(content) {
   const contentDOM = document.getElementById('content');
   contentDOM.innerHTML = content.text;
   contentDOM.style.color = content.color;
+  console.log(123)
 }
 
 let appState = {
