@@ -1,5 +1,6 @@
 function createStore(state, stateChanger) {
   const listeners = [];
+  console.log(1212)
   debugger
   const subscribe = listener => listeners.push(listener);
   const getState = () => state;
@@ -12,16 +13,19 @@ function createStore(state, stateChanger) {
 
 function renderApp(appState) {
   renderTitle(appState.title);
+  console.log(1212)
   renderContent(appState.content);
 }
 
 function renderTitle(title) {
+  console.log(1212)
   const titleDOM = document.getElementById('title');
   titleDOM.innerHTML = title.text;
   titleDOM.style.color = title.color;
 }
 
 function renderContent(content) {
+  console.log(1212)
   const contentDOM = document.getElementById('content');
   contentDOM.innerHTML = content.text;
   contentDOM.style.color = content.color;
